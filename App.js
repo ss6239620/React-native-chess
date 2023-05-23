@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Image, Text, Dimensions, TouchableOpacity } from 'react-native';
+import { ChessBoard } from './components/Board';
+import { GameState, Images, Move } from './components/Engine';
 
-export default function App() {
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
+const dimension = 8
+
+const Chessboard = () => {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <GameState />
+  )
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const styles = StyleSheet.create({});
+
+export default Chessboard;
