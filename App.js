@@ -10,6 +10,7 @@ const dimension = 8
 const Chessboard = () => {
 
   return (
+    
     <GameState />
   )
 
